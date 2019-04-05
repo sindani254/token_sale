@@ -117,7 +117,7 @@ contract('MoreToken', function(accounts) {
 			assert.equal(receiver_bal.toNumber(), 10, 'updates receiver`s balance');
 			return tokenInstance.allowance(fromAccount, toAccount);
 		}).then(function(allowance) {
-			assert.equal(allowance, 0, 'updates the allowance');
+			assert.equal(allowance.toNumber(), 0, 'updates the allowance');
 		});
 	});
 })
